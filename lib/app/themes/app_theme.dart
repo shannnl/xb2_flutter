@@ -4,7 +4,7 @@ class AppTheme {
   // 亮色主题
   static ThemeData light = ThemeData(
     primaryColor: Colors.deepPurpleAccent,
-    // accentColor: Colors.deepPurple.shade900,
+    hintColor: Colors.deepPurple.shade900,
     colorScheme: ColorScheme.light(
       primary: Colors.deepPurpleAccent,
       secondary: Colors.amber,
@@ -14,7 +14,7 @@ class AppTheme {
   // 暗色主题
   static ThemeData dark = ThemeData(
     primaryColor: Colors.deepPurpleAccent,
-    // accentColor: Colors.deepPurple.shade900,
+    hintColor: Colors.deepPurple.shade900,
     colorScheme: ColorScheme.dark(
       primary: Colors.deepPurpleAccent,
       secondary: Colors.amber,

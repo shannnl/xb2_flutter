@@ -26,7 +26,7 @@ class PostHeader extends StatelessWidget {
               children: [
                 Text(
                   post.title!,
-                  style: Theme.of(context).textTheme.titleLarge,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 Text(
                   post.user!.name!,
