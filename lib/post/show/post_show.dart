@@ -15,7 +15,7 @@ class PostShow extends StatefulWidget {
   });
 
   @override
-  State<PostShow> createState() => _PostShowState();
+  _PostShowState createState() => _PostShowState();
 }
 
 class _PostShowState extends State<PostShow> {

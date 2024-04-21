@@ -3,7 +3,7 @@ import 'package:xb2_flutter/app/components/app_bottom_sheet.dart';
 
 class AppFloatingActionButton extends StatefulWidget {
   @override
-  State<AppFloatingActionButton> createState() =>
+  _AppFloatingActionButtonState createState() =>
       _AppFloatingActionButtonState();
 }
 

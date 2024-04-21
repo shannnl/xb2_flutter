@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserCreate extends StatefulWidget {
   @override
-  State<UserCreate> createState() => _UserCreateState();
+  _UserCreateState createState() => _UserCreateState();
 }
 
 class _UserCreateState extends State<UserCreate> {

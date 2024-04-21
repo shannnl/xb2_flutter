@@ -24,12 +24,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class App extends StatefulWidget {
   @override
-  State<App> createState() => _AppState();
+  _AppState createState() => _AppState();
 }
 
 class _AppState extends State<App> {
-  final AuthModel authModel = AuthModel();
   final AppModel appModel = AppModel();
+  final AuthModel authModel = AuthModel();
+  
 
   bool initializing = true;
 

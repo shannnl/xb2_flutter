@@ -11,7 +11,7 @@ import 'package:xb2_flutter/auth/auth_Model.dart';
 
 class AuthLoginForm extends StatefulWidget {
   @override
-  State<AuthLoginForm> createState() => _AuthLoginFormState();
+  _AuthLoginFormState createState() => _AuthLoginFormState();
 }
 
 class _AuthLoginFormState extends State<AuthLoginForm> {

@@ -9,7 +9,7 @@ import 'package:xb2_flutter/user/user.dart';
 
 class playgroundHttp extends StatefulWidget {
   @override
-  State<playgroundHttp> createState() => _playgroundHttpState();
+  _playgroundHttpState createState() => _playgroundHttpState();
 }
 
 class _playgroundHttpState extends State<playgroundHttp> {
