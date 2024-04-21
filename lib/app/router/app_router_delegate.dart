@@ -10,7 +10,7 @@ import 'package:xb2_flutter/post/show/post_show_model.dart';
 
 class AppRouterDelegate extends RouterDelegate<AppRouteConfiguration>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin {
-  final GlobalKey<NavigatorState> _navigatorKey;
+  final _navigatorKey;
   final AppModel appModel;
 
   AppRouterDelegate(this.appModel)
