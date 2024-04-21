@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/auth/login/components/auth_login_form.dart';
+import 'package:select_demo/auth/login/components/auth_login_form.dart';
 
 class AuthLogin extends StatelessWidget {
   @override
@@ -10,5 +10,6 @@ class AuthLogin extends StatelessWidget {
       ),
       body: AuthLoginForm(),
     );
+    // return Center(child: AuthLoginForm());
   }
 }

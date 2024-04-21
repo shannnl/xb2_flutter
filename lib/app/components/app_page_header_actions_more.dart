@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppPageHeaderActionsMore extends StatelessWidget {
+class AppPageHeaderActionMore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(

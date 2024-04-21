@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserCreate extends StatefulWidget {
   @override
-  _UserCreateState createState() => _UserCreateState();
+  State<UserCreate> createState() => _UserCreateState();
 }
 
 class _UserCreateState extends State<UserCreate> {
@@ -37,12 +37,13 @@ class _UserCreateState extends State<UserCreate> {
       print('密码 ${passwordFieldController.text}');
     });
 
-    // nameFieldController.text = 'wanghao';
-    // passwordFieldController.text = '123456';
+    nameFieldController.text = 'shannnl'; 
+    passwordFieldController.text = '123456';
   }
 
   @override
   Widget build(BuildContext context) {
+    // return Container();
     return Form(
       key: formKey,
       child: Column(
@@ -61,7 +62,7 @@ class _UserCreateState extends State<UserCreate> {
             key: nameFieldKey,
             controller: nameFieldController,
             decoration: InputDecoration(
-              labelText: '用户',
+              labelText: "用户",
             ),
             onChanged: (value) {
               name = value;
@@ -71,7 +72,7 @@ class _UserCreateState extends State<UserCreate> {
               if (value == null || value.isEmpty) {
                 return '请填写用户名';
               }
-
+      
               return null;
             },
           ),
@@ -81,7 +82,7 @@ class _UserCreateState extends State<UserCreate> {
             controller: passwordFieldController,
             obscureText: true,
             decoration: InputDecoration(
-              labelText: '密码',
+              labelText: "密码",
             ),
             onChanged: (value) {
               password = value;
@@ -91,11 +92,11 @@ class _UserCreateState extends State<UserCreate> {
               if (value == null || value.isEmpty) {
                 return '请填写用户密码';
               }
-
+      
               if (value.isNotEmpty && value.length < 6) {
                 return '请设置 6 位以上的密码';
               }
-
+      
               return null;
             },
           ),
@@ -107,11 +108,14 @@ class _UserCreateState extends State<UserCreate> {
             ),
             child: Text('注册用户'),
             onPressed: () {
+              // print('注册用户 $name, $password');
+      
               // nameFieldKey.currentState!.validate();
               // passwordFieldKey.currentState!.validate();
+
               formKey.currentState!.validate();
               print(
-                  '注册用户：用户 ${nameFieldKey.currentState!.value}, 密码 ${passwordFieldKey.currentState!.value}');
+                  "注册用户：用户 ${nameFieldKey.currentState!.value}, 密码 ${passwordFieldKey.currentState!.value}");
             },
           ),
         ],

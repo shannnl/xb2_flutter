@@ -8,8 +8,8 @@ class AppPageAside extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text('王皓'),
-            accountEmail: Text('wanghao@ninghao.net'),
+            accountName: Text("shannnl"),
+            accountEmail: Text("shannnl@qq.com"),
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
                 'https://resources.ninghao.net/wanghao.jpg',
@@ -18,64 +18,58 @@ class AppPageAside extends StatelessWidget {
           ),
           ListTile(
             title: Text(
-              '作品',
+              "作品",
               textAlign: TextAlign.right,
             ),
-            trailing: Icon(
-              Icons.image_outlined,
-              color: Colors.black26,
-              size: 22,
-            ),
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
             onTap: () {},
           ),
           ListTile(
             title: Text(
-              '评论',
+              "作品",
               textAlign: TextAlign.right,
             ),
-            trailing: Icon(
-              Icons.comment_outlined,
-              color: Colors.black26,
-              size: 22,
-            ),
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
             onTap: () {},
           ),
           Divider(),
           ListTile(
             title: Text(
-              '帐户',
+              "作品",
               textAlign: TextAlign.right,
             ),
-            trailing: Icon(
-              Icons.manage_accounts_outlined,
-              color: Colors.black26,
-              size: 22,
-            ),
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
             onTap: () {},
           ),
           ListTile(
             title: Text(
-              '管理',
+              "作品",
               textAlign: TextAlign.right,
             ),
-            trailing: Icon(
-              Icons.collections_outlined,
-              color: Colors.black26,
-              size: 22,
-            ),
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
             onTap: () {},
           ),
           Divider(),
           ListTile(
             title: Text(
-              '退出',
+              "作品",
               textAlign: TextAlign.right,
             ),
-            trailing: Icon(
-              Icons.logout_outlined,
-              color: Colors.black26,
-              size: 22,
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text(
+              "作品",
+              textAlign: TextAlign.right,
             ),
+            trailing:
+                Icon(Icons.comment_outlined, color: Colors.black26, size: 22),
             onTap: () {},
           ),
         ],

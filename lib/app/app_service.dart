@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:xb2_flutter/auth/auth_model.dart';
+import 'package:select_demo/auth/auth_model.dart';
 
 class ApiHttpClient extends http.BaseClient {
   final String token;
@@ -9,9 +9,15 @@ class ApiHttpClient extends http.BaseClient {
     required this.token,
   });
 
+  // _setHeaders() => {
+  //   'Content-type': 'application/json',
+  //   'Accept': 'application/json',
+  // };
+
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) {
     if (token.isNotEmpty) {
+      // request.headers.addAll(_setHeaders());
       request.headers.putIfAbsent('Authorization', () => 'Bearer $token');
     }
 

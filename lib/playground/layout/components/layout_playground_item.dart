@@ -13,11 +13,12 @@ class PlaygroundLayoutItem extends StatelessWidget {
         horizontal: 32.0,
       ),
       decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.black,
-            width: 3.0,
-          ),
-          color: Colors.yellow[200]),
+        border: Border.all(
+          color: Colors.black,
+          width: 3.0,
+        ),
+        color: Colors.yellow[200],
+      ),
       child: Text(
         textContent,
         style: TextStyle(

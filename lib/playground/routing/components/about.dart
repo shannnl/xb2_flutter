@@ -13,7 +13,7 @@ class About extends StatelessWidget {
           children: [
             Text(
               '宁皓网，创立于 2011 年。',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             TextButton(
               child: Text('返回'),

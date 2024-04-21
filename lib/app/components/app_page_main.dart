@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/playground/playground.dart';
-import 'package:xb2_flutter/post/create/post_create.dart';
-import 'package:xb2_flutter/post/index/post_index.dart';
-import 'package:xb2_flutter/user/profile/user_profile.dart';
+import 'package:select_demo/playground/playground.dart';
+import 'package:select_demo/post/create/post_creat.dart';
+import 'package:select_demo/post/index/post_index.dart';
+import 'package:select_demo/user/profile/user_profile.dart';
 
 class AppPageMain extends StatelessWidget {
+
   final int currentIndex;
 
   AppPageMain({this.currentIndex = 0});
-
-  // 一组页面主体小部件
+  
   final pageMain = [
-    // 发现
+    //发现
     PostIndex(),
-    // 添加
+    //添加
     PostCreate(),
-    // 用户
+    //用户
     UserProfile(),
-    // 练习
+    //练习
     Playground(),
   ];
+
 
   @override
   Widget build(BuildContext context) {

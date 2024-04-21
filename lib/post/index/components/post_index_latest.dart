@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/post/index/components/post_list.dart';
+import 'package:select_demo/post/index/components/post_list.dart';
 
 class PostIndexLatest extends StatelessWidget {
   @override
@@ -8,5 +8,10 @@ class PostIndexLatest extends StatelessWidget {
       padding: EdgeInsets.all(16),
       child: PostList(),
     );
+    // return Icon(
+    //   Icons.explore_outlined,
+    //   size: 128,
+    //   color: Colors.black12,
+    // );
   }
 }

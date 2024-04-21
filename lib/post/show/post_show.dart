@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:xb2_flutter/app/components/app_no_content.dart';
-import 'package:xb2_flutter/post/post.dart';
-import 'package:xb2_flutter/post/show/components/post_show_main.dart';
-import 'package:xb2_flutter/post/show/post_show_model.dart';
+import 'package:select_demo/app/components/app_no_content.dart';
+import 'package:select_demo/post/post.dart';
+import 'package:select_demo/post/show/components/post_show_main.dart';
+import 'package:select_demo/post/show/post_show_model.dart';
 
 class PostShow extends StatefulWidget {
   final String postId;
@@ -15,7 +15,7 @@ class PostShow extends StatefulWidget {
   });
 
   @override
-  _PostShowState createState() => _PostShowState();
+  State<PostShow> createState() => _PostShowState();
 }
 
 class _PostShowState extends State<PostShow> {
@@ -38,6 +38,16 @@ class _PostShowState extends State<PostShow> {
 
     return Scaffold(
       body: post != null ? PostShowMain(post: post) : AppNoContent(),
+      // body: PostShowMain(post: widget.post!),
+
+      // appBar: AppBar(),
+      // body: Center(
+      //   child: Text(
+      //     // '内容：$postId \n ${post!.title!}',
+      //     post!.title!,
+      //     style: Theme.of(context).textTheme.titleLarge,
+      //   ),
+      // ),
     );
   }
 }

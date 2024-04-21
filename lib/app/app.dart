@@ -1,34 +1,41 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:select_demo/app/app_model.dart';
+import 'package:select_demo/app/app_provider.dart';
+import 'package:select_demo/app/router/app_route_information_parser.dart';
+import 'package:select_demo/app/router/app_router_delegate.dart';
+// import 'package:select_demo/app/components/app_home.dart';
+// import 'package:select_demo/app/components/app_floating_action_button.dart';
+// import 'package:select_demo/app/components/app_page_aside.dart';
+// import 'package:select_demo/app/components/app_page_bottom.dart';
+// import 'package:select_demo/app/components/app_page_header.dart';
+// import 'package:select_demo/app/components/app_page_main.dart';
+import 'package:select_demo/app/themes/app_theme.dart';
+import 'package:select_demo/auth/auth.dart';
+import 'package:select_demo/auth/auth_Model.dart';
+import 'package:select_demo/post/post_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:xb2_flutter/app/app_model.dart';
-import 'package:xb2_flutter/app/app_provider.dart';
-import 'package:xb2_flutter/app/components/app_home.dart';
-import 'package:xb2_flutter/app/router/app_route_information_parser.dart';
-import 'package:xb2_flutter/app/router/app_router_delegate.dart';
-import 'package:xb2_flutter/app/themes/app_theme.dart';
-import 'package:xb2_flutter/auth/auth.dart';
-import 'package:xb2_flutter/auth/auth_model.dart';
-import 'package:xb2_flutter/playground/routing/components/about.dart';
-import 'package:xb2_flutter/post/post_provider.dart';
-import 'package:xb2_flutter/post/show/post_show.dart';
-import 'package:xb2_flutter/post/show/post_show_model.dart';
+// import 'package:select_demo/post/show/post_show_model.dart';
+// import 'package:select_demo/playground/routing/components/about.dart';
+// import 'package:select_demo/post/show/post_show.dart';
 
 class App extends StatefulWidget {
   @override
-  _AppState createState() => _AppState();
+  State<App> createState() => _AppState();
 }
 
 class _AppState extends State<App> {
-  final AppModel appModel = AppModel();
   final AuthModel authModel = AuthModel();
+  final AppModel appModel = AppModel();
 
   bool initializing = true;
 
   initialize() async {
     final prefs = await SharedPreferences.getInstance();
+
     final hasAuth = prefs.containsKey('auth');
 
     if (hasAuth) {
@@ -62,12 +69,17 @@ class _AppState extends State<App> {
         ),
       );
     }
-
+    // return Provider(
+    // return ChangeNotifierProvider(
+    // create: (context) => AuthModel(),
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider.value(value: authModel),
-        ChangeNotifierProvider.value(value: appModel),
-        ...appPrividers,
+        // ChangeNotifierProvider<AuthModel>(create: (context) => AuthModel()),
+        // ChangeNotifierProvider<AppModel>(create: (context) => appModel),
+        // ChangeNotifierProvider<PostShowModel>( create: (context) => PostShowModel()),
+        ChangeNotifierProvider<AuthModel>.value(value: authModel),
+        ChangeNotifierProvider<AppModel>.value(value: appModel),
+        ...appProviders,
         ...postProviders,
       ],
       child: MaterialApp.router(
@@ -80,3 +92,98 @@ class _AppState extends State<App> {
     );
   }
 }
+
+        // home: AppHome(),
+        // initialRoute: "/",
+
+        // home: Router(routerDelegate: AppRouterDelegate(appModel),)
+
+        // home: Consumer<AppModel>(
+        //   builder: (context, state, child) => Navigator(
+            // pages: [
+            //   MaterialPage(
+            //     key: ValueKey('AppHome'),
+            //     child: AppHome(),
+            //   ),
+            //   if (state.pageName == 'About')
+            //     MaterialPage(
+            //       key: ValueKey('About'),
+            //       child: About(),
+            //     ),
+            // ],
+            // onPopPage: (route, result) {
+            //   if (!route.didPop(result)) {
+            //     return false;
+            //   }
+
+            //   state.setPageName('');
+
+            //   return true;
+            // },
+        //   ),
+        // ),
+
+        // home: Navigator(
+        //   pages: [
+        //     MaterialPage(
+        //       key: ValueKey('AppHome'),
+        //       child: AppHome(),
+        //     ),
+        //     MaterialPage(
+        //       key: ValueKey('About'),
+        //       child: About(),
+        //     ),
+        //   ],
+        // ),
+
+        // routes: {
+        //   "/": (context) => AppHome(),
+        //   '/about': (context) => About(),
+        // },
+
+        // onGenerateRoute: (settings) {
+        //   print(settings);
+
+        //   if (settings.name == '/') {
+        //     return MaterialPageRoute(builder: (context) => AppHome());
+        //   }
+
+        //   if (settings.name == '/about') {
+        //     return MaterialPageRoute(builder: (context) => About());
+        //   }
+
+        //   final uri = Uri.parse(settings.name ?? '');
+
+        //   if (uri.pathSegments.length == 2 && uri.pathSegments.first == 'posts') {
+        //     final postId = uri.pathSegments[1];
+
+        //     return MaterialPageRoute(builder: (context) => PostShow(postId));
+        //   }
+        //   return null;
+        // },
+//       ),
+//     );
+//   }
+// }
+
+// home: Center(
+//   child: FilledButton(
+//     child: Text("shannnl"),
+//     onPressed: () {
+//       print("你好");
+//     },
+//     ),
+
+// child: Icon(
+//   Icons.landscape_rounded,
+//   color: Colors.amber,
+//   size:128,
+//   ),
+
+// child: Text(
+//   "shannnl"),
+//       ),
+
+//     );
+//   }
+// }

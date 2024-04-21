@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/app/app_config.dart';
-import 'package:xb2_flutter/post/post.dart';
+import 'package:select_demo/app/app_config.dart';
+import 'package:select_demo/post/post.dart';
 
 class UserAvatar extends StatelessWidget {
   final PostUser user;
@@ -14,6 +14,7 @@ class UserAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userId = user.id;
+
     final avatarUrl =
         '${AppConfig.apiBaseUrl}/users/$userId/avatar?size=medium';
 

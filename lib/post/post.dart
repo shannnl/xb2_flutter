@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'post.g.dart';
+part "post.g.dart";
 
 @JsonSerializable(explicitToJson: true)
 class Post {

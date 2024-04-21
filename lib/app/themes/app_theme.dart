@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  // 亮色主题
-  static ThemeData light = ThemeData(
-    primaryColor: Colors.deepPurpleAccent,
-    hintColor: Colors.deepPurple.shade900,
-    colorScheme: ColorScheme.light(
-      primary: Colors.deepPurpleAccent,
+  static ThemeData light = ThemeData( 
+    primaryColor: Colors.deepPurpleAccent, 
+    colorScheme: ColorScheme.light( 
+      primary: Colors.deepPurpleAccent, 
+      secondary: Colors.amber, 
+      ), 
+  );
+
+  static ThemeData dark = ThemeData(
+    primaryColor: Colors.deepPurpleAccent, 
+    colorScheme: ColorScheme.dark( 
+      primary: Colors.cyan, 
       secondary: Colors.amber,
     ),
   );
 
-  // 暗色主题
-  static ThemeData dark = ThemeData(
-    primaryColor: Colors.deepPurpleAccent,
-    hintColor: Colors.deepPurple.shade900,
-    colorScheme: ColorScheme.dark(
-      primary: Colors.deepPurpleAccent,
-      secondary: Colors.amber,
-    ),
-  );
 }

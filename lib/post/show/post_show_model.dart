@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:xb2_flutter/app/app_config.dart';
-import 'package:xb2_flutter/post/post.dart';
+import 'package:select_demo/app/app_config.dart';
+import 'package:select_demo/post/post.dart';
 
 class PostShowModel extends ChangeNotifier {
   Post? post;
@@ -15,6 +15,7 @@ class PostShowModel extends ChangeNotifier {
 
   Future<Post> getPostById(String postId) async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}/posts/$postId');
+
     final response = await http.get(uri);
     final responseBody = jsonDecode(response.body);
     final parsed = Post.fromJson(responseBody);

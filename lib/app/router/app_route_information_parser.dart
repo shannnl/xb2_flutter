@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/app/router/app_route_configuration.dart';
+import 'package:select_demo/app/router/app_router_configuration.dart';
 
 class AppRouteInformationParser
     extends RouteInformationParser<AppRouteConfiguration> {
-  // 解析路由信息
+// 解析路由信息
   @override
   parseRouteInformation(routeInformation) async {
-    final uri = Uri.parse(routeInformation.location ?? '');
+    final uri = Uri.parse(routeInformation.uri.path ?? '');
 
-    if (routeInformation.location == '/about') {
+    // print('解析路由信息 parseRouteInformation');
+    // print(routeInformation.uri.path);
+
+    if (routeInformation.uri.path == '/about') {
       return AppRouteConfiguration.about();
     }
 
@@ -23,15 +26,17 @@ class AppRouteInformationParser
   @override
   restoreRouteInformation(configuration) {
     if (configuration.isHomePage) {
-      return RouteInformation(location: '/');
+      return RouteInformation(uri: Uri.parse('/'));
     }
 
     if (configuration.isAboutPage) {
-      return RouteInformation(location: '/about');
+      return RouteInformation(uri: Uri.parse('/about'));
     }
 
     if (configuration.isPostShow) {
-      return RouteInformation(location: '/posts/${configuration.resourceId}');
+      return RouteInformation(uri: Uri.parse('/posts/${configuration.resourceId}'));
     }
+
+    return null;
   }
 }

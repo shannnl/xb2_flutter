@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 
 class AppBottomSheet extends StatelessWidget {
-  // 显示对话框
+  //显示对话框
   Future<bool?> showAppAlertDialog(context) {
     return showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('确定提交'),
-        content: Text('提交以后无法恢复，确定要提交吗？'),
+        title: Text("确定提交"),
+        content: Text("提交后无法恢复，确定吗？"),
         actions: [
           TextButton(
-            child: Text('取消'),
-            onPressed: () => Navigator.pop(context, false),
-          ),
+              onPressed: () => Navigator.pop(context, false),
+              child: Text("取消")),
           TextButton(
-            child: Text('确定'),
-            onPressed: () => Navigator.pop(context, true),
-          ),
+              onPressed: () => Navigator.pop(context, true), child: Text("确定")),
         ],
       ),
     );
   }
 
-  // 显示操作提示
+  //显示操作提示
   void showAppSnackBar(context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -51,19 +48,18 @@ class AppBottomSheet extends StatelessWidget {
         ],
       ),
       child: Center(
-        child: TextButton(
-          child: Text('提交'),
-          onPressed: () async {
-            // 显示对话框
-            final result = await showAppAlertDialog(context);
-            print('showAppAlertDialog: $result');
+          child: TextButton(
+        child: Text("提交"),
+        onPressed: () async {
+          //显示警告对话框
+          final result = await showAppAlertDialog(context);
+          print("showAppAlterDialog: $result");
 
-            if (result != null && result) {
-              showAppSnackBar(context);
-            }
-          },
-        ),
-      ),
+          if (result != null && result){
+            showAppSnackBar(context);
+          }
+        },
+      )),
     );
   }
 }

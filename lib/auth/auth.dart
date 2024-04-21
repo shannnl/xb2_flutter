@@ -29,7 +29,6 @@ class Auth {
     required this.name,
     required this.token,
   });
-
   factory Auth.fromJson(Map<String, dynamic> json) {
     return _$AuthFromJson(json);
   }

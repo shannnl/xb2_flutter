@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/app/components/app_logo.dart';
-import 'package:xb2_flutter/playground/layout/components/playground_layout_item.dart';
+import 'package:flutter/widgets.dart';
+import 'package:select_demo/app/components/app_log.dart';
+// import 'package:select_demo/playground/layout/components/layout_playground_item.dart';
 
 class PlaygroundLayout extends StatelessWidget {
   @override
@@ -20,11 +22,36 @@ class PlaygroundLayout extends StatelessWidget {
             Positioned(
               bottom: 24,
               right: 24,
-              child: AppLogo(size: 64),
-            ),
+              child: AppLogo(size: 64,color: Colors.white,)),
+            
           ],
         ),
+
+        // child: SafeArea(
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+        //     crossAxisAlignment: CrossAxisAlignment.end,
+        //     children: [
+        //       Expanded(flex:2, child:PlaygroundLayoutItem("1")),
+        //       Expanded(flex:1, child: PlaygroundLayoutItem("2")),
+        //       PlaygroundLayoutItem("3"),
+        //     ],
+        //   ),
+        // ),
       ),
     );
+
+    // return Container(
+    //   color: Colors.greenAccent,
+    //   width: 200,
+    //   height: 200,
+    //   child: Center(
+    //     child: Container(
+    //       color: Colors.deepPurpleAccent,
+    //       width: 100,
+    //       height: 100,
+    //     ),
+    //   ),
+    // );
   }
 }

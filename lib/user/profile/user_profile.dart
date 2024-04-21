@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:xb2_flutter/app/app_model.dart';
-import 'package:xb2_flutter/auth/auth_model.dart';
+import 'package:select_demo/app/app_model.dart';
+import 'package:select_demo/auth/auth_Model.dart';
 
 class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 准备
+
     final appModel = context.read<AppModel>();
     final authModel = context.watch<AuthModel>();
 
@@ -36,3 +37,26 @@ class UserProfile extends StatelessWidget {
     );
   }
 }
+
+    // return Consumer<AuthModel>(
+    //   builder: (context, state, child) {
+    //     return Container(
+    //       color: Colors.white,
+    //       height: double.infinity,
+    //       width: double.infinity,
+    //       child: Center(
+    //         child: state.isLoggedIn ? Text(state.name) : Text('未登录'),
+    //       ),
+    //     );
+    //   },
+    // );
+
+    // return Center(
+    //   child: Icon(
+    //     Icons.account_circle_outlined,
+    //     size:38,
+    //     color: Colors.black12,
+    //     ),
+    //     );
+//   }
+// }

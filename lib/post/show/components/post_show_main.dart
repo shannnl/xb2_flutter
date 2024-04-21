@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:xb2_flutter/post/components/post_content.dart';
-import 'package:xb2_flutter/post/components/post_header.dart';
-import 'package:xb2_flutter/post/components/post_media.dart';
-import 'package:xb2_flutter/post/components/post_tags.dart';
-import 'package:xb2_flutter/post/post.dart';
+import 'package:select_demo/post/components/post_content.dart';
+import 'package:select_demo/post/components/post_tags.dart';
+import 'package:select_demo/post/index/components/post_header.dart';
+import 'package:select_demo/post/index/components/post_media.dart';
+import 'package:select_demo/post/post.dart';
 
 class PostShowMain extends StatelessWidget {
   final Post post;
-
   PostShowMain({required this.post});
-
   @override
   Widget build(BuildContext context) {
     final closeButton = MaterialButton(
@@ -76,3 +74,16 @@ class PostShowMain extends StatelessWidget {
     );
   }
 }
+
+//     return SingleChildScrollView(
+//       child: Container(
+//         Center(
+//         child: Text(
+//           // '内容：$postId \n ${post!.title!}',
+//           post!.title!,
+//           style: Theme.of(context).textTheme.titleLarge,
+//         ),
+//       ),,),
+//     );
+//   }
+// }

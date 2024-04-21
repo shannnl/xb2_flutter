@@ -14,7 +14,7 @@ class _AppHomeState extends State<AppHome> {
   // 底部导航栏当前项目
   int currentAppBottomNavigationBarItem = 0;
 
-  // 是否显示应用栏
+  //是否显示应用栏
   bool showAppBar = true;
 
   // 点按底部导航栏事件处理
