@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/post/post.dart';
+import 'package:xb2_flutter/post/post.dart';
 
 class PostTags extends StatelessWidget {
   final List<PostTag> tags;

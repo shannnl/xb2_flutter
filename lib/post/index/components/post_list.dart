@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:select_demo/post/index/components/post_list_item.dart';
-import 'package:select_demo/post/index/post_index_model.dart';
+import 'package:xb2_flutter/post/index/components/post_list_item.dart';
+import 'package:xb2_flutter/post/index/post_index_model.dart';
 
 class PostList extends StatefulWidget {
   @override

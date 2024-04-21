@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/auth/login/auth_login.dart';
+import 'package:xb2_flutter/auth/login/auth_login.dart';
 
 class PlaygroundState extends StatelessWidget {
   @override

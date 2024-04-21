@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:select_demo/app/app_model.dart';
-import 'package:select_demo/post/index/components/post_header.dart';
-import 'package:select_demo/post/index/components/post_media.dart';
-import 'package:select_demo/post/post.dart';
-import 'package:select_demo/post/show/post_show_model.dart';
+import 'package:xb2_flutter/app/app_model.dart';
+import 'package:xb2_flutter/post/index/components/post_header.dart';
+import 'package:xb2_flutter/post/index/components/post_media.dart';
+import 'package:xb2_flutter/post/post.dart';
+import 'package:xb2_flutter/post/show/post_show_model.dart';
 
 // enum PostListLayout {
 //   stack,

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:select_demo/app/components/app_log.dart';
-// import 'package:select_demo/playground/layout/components/layout_playground_item.dart';
+import 'package:xb2_flutter/app/components/app_log.dart';
+// import 'package:xb2_flutter/playground/layout/components/layout_playground_item.dart';
 
 class PlaygroundLayout extends StatelessWidget {
   @override

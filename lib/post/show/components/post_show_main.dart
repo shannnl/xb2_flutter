@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/post/components/post_content.dart';
-import 'package:select_demo/post/components/post_tags.dart';
-import 'package:select_demo/post/index/components/post_header.dart';
-import 'package:select_demo/post/index/components/post_media.dart';
-import 'package:select_demo/post/post.dart';
+import 'package:xb2_flutter/post/components/post_content.dart';
+import 'package:xb2_flutter/post/components/post_tags.dart';
+import 'package:xb2_flutter/post/index/components/post_header.dart';
+import 'package:xb2_flutter/post/index/components/post_media.dart';
+import 'package:xb2_flutter/post/post.dart';
 
 class PostShowMain extends StatelessWidget {
   final Post post;

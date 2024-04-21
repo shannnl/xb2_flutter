@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:select_demo/app/app_model.dart';
-// import 'package:select_demo/playground/routing/components/about.dart';
+import 'package:xb2_flutter/app/app_model.dart';
+// import 'package:xb2_flutter/playground/routing/components/about.dart';
 
 class PlaygroundRouting extends StatelessWidget {
   @override

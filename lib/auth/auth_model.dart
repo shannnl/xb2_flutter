@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:select_demo/app/app_config.dart';
-import 'package:select_demo/app/exception/http_exception.dart';
-import 'package:select_demo/auth/auth.dart';
+import 'package:xb2_flutter/app/app_config.dart';
+import 'package:xb2_flutter/app/exception/http_exception.dart';
+import 'package:xb2_flutter/auth/auth.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

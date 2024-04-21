@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:select_demo/app/app_config.dart';
+import 'package:xb2_flutter/app/app_config.dart';
 import 'package:http/http.dart' as http;
-import 'package:select_demo/app/app_service.dart';
-import 'package:select_demo/post/post.dart';
+import 'package:xb2_flutter/app/app_service.dart';
+import 'package:xb2_flutter/post/post.dart';
 
 class PostIndexModel extends ChangeNotifier {
   // dynamic posts;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/app/router/app_router_configuration.dart';
+import 'package:xb2_flutter/app/router/app_router_configuration.dart';
 
 class AppRouteInformationParser
     extends RouteInformationParser<AppRouteConfiguration> {

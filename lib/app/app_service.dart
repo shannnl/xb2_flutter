@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:select_demo/auth/auth_model.dart';
+import 'package:xb2_flutter/auth/auth_model.dart';
 
 class ApiHttpClient extends http.BaseClient {
   final String token;

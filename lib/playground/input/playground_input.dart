@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/user/create/user_create.dart';
+import 'package:xb2_flutter/user/create/user_create.dart';
 
 class PlaygroundInput extends StatelessWidget {
   @override

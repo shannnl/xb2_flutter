@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/app/components/app_floating_action_button.dart';
-import 'package:select_demo/app/components/app_page_aside.dart';
-import 'package:select_demo/app/components/app_page_bottom.dart';
-import 'package:select_demo/app/components/app_page_header.dart';
-import 'package:select_demo/app/components/app_page_main.dart';
-import 'package:select_demo/app/themes/app_theme.dart';
+import 'package:xb2_flutter/app/components/app_floating_action_button.dart';
+import 'package:xb2_flutter/app/components/app_page_aside.dart';
+import 'package:xb2_flutter/app/components/app_page_bottom.dart';
+import 'package:xb2_flutter/app/components/app_page_header.dart';
+import 'package:xb2_flutter/app/components/app_page_main.dart';
+import 'package:xb2_flutter/app/themes/app_theme.dart';
 
 class App extends StatefulWidget {
   @override

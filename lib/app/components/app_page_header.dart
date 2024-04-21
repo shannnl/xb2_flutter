@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:select_demo/app/components/app_log.dart';
-import 'package:select_demo/app/components/app_page_header_actions_more.dart';
+import 'package:xb2_flutter/app/components/app_log.dart';
+import 'package:xb2_flutter/app/components/app_page_header_actions_more.dart';
 
 class AppPageHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
