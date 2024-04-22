@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -33,7 +34,14 @@ class AuthModel extends ChangeNotifier {
 
   Future<Auth> login(LoginData data) async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}/login');
-    final response = await http.post(uri, body: data.toJson());
+    // final response = await http.post(uri, body: data.toJson());
+    // final responseBody = jsonDecode(response.body);
+    final response = await http.post(
+      uri, 
+      headers: <String, String>{
+        HttpHeaders.contentTypeHeader: 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(data.toJson()));
     final responseBody = jsonDecode(response.body);
 
     if (response.statusCode == 200) {
