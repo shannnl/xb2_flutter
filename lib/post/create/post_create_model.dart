@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -51,10 +52,14 @@ class PostCreateModel extends ChangeNotifier {
   Future<int> createPost() async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}/posts');
 
-    final response = await appService.apiHttpClient.post(uri, body: {
+    final response = await appService.apiHttpClient.post(uri, 
+    headers: <String, String>{
+        HttpHeaders.contentTypeHeader: 'application/json; charset=UTF-8',
+      },
+    body: jsonEncode({
       'title': title,
       'content': content,
-    });
+    }));
 
     final responseBody = jsonDecode(response.body);
 
