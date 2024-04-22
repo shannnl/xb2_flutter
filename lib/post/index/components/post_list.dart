@@ -18,7 +18,6 @@ class PostList extends StatefulWidget {
 class _PostListState extends State<PostList> {
   restoreLayout() async {
     final prefs = await SharedPreferences.getInstance();
-
     final data = prefs.getString('postListLayout');
 
     if (data != null) {
@@ -38,10 +37,10 @@ class _PostListState extends State<PostList> {
       context.read<PostIndexModel>().getPosts(
             sort: widget.sort ?? 'latest',
           );
-    
-    // 恢复布局 
-    restoreLayout();
     });
+
+    // 恢复布局
+    restoreLayout();
   }
 
   @override
@@ -74,13 +73,6 @@ class _PostListState extends State<PostList> {
           item: posts[index],
           layout: PostListLayout.grid,
         );
-      },
-    );
-
-    final list = ListView.builder(
-      itemCount: posts.length,
-      itemBuilder: (context, index) {
-        return PostListItem(item: posts[index]);
       },
     );
 
