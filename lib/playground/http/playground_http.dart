@@ -36,7 +36,12 @@ class _PlaygroundHttpState extends State<PlaygroundHttp> {
 
     final uri = Uri.parse('https://nid-node.ninghao.co/users');
 
-    final response = await http.post(uri, body: {
+    final response = await http.post(
+      uri, 
+      headers: <String, String>{
+        HttpHeaders.contentTypeHeader: 'application/json; charset=UTF-8',
+      },
+      body: {
       'name': name,
       'password': password,
     });

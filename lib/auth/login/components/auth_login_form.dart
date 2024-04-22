@@ -67,7 +67,7 @@ class _AuthLoginFormState extends State<AuthLoginForm> {
     );
 
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(6),
       child: Form(
         key: formKey,
         child: Column(
