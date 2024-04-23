@@ -15,7 +15,8 @@ class PostMedia extends StatelessWidget {
     return Container(
       child: Image.network(
         imageUrl,
-        fit:BoxFit.cover,),
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

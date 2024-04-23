@@ -6,7 +6,7 @@ class AppPageHeaderActionsMore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final postIndexModel = context.watch<PostIndexModel>();
-    
+
     return PopupMenuButton(
       icon: Icon(Icons.more_horiz),
       offset: Offset(0, 50),
