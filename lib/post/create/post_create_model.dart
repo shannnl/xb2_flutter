@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'dart:io';
 
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:xb2_flutter/app/app_config.dart';
 import 'package:xb2_flutter/app/app_service.dart';
@@ -16,7 +14,7 @@ class PostCreateModel extends ChangeNotifier {
 
   String? title;
   String? content;
-  PlatformFile? selectedFile;
+
   bool loading = false;
 
   setTitle(String? data) {
@@ -27,10 +25,6 @@ class PostCreateModel extends ChangeNotifier {
     content = data;
   }
 
-  setSelectedFile(PlatformFile? data) {
-    selectedFile = data;
-    notifyListeners();
-  }
 
   setLoading(bool data) {
     loading = data;
@@ -40,26 +34,18 @@ class PostCreateModel extends ChangeNotifier {
   reset() {
     title = null;
     content = null;
-    selectedFile = null;
-  }
 
-  bool hasData() {
-    return title != null || content != null || selectedFile != null
-        ? true
-        : false;
   }
 
   Future<int> createPost() async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}/posts');
 
-    final response = await appService.apiHttpClient.post(uri, 
-    headers: <String, String>{
-        HttpHeaders.contentTypeHeader: 'application/json; charset=UTF-8',
-      },
-    body: jsonEncode({
+
+    final response = await appService.apiHttpClient.post(uri, body: {
       'title': title,
       'content': content,
-    }));
+    });
+
 
     final responseBody = jsonDecode(response.body);
 
@@ -70,17 +56,5 @@ class PostCreateModel extends ChangeNotifier {
       throw HttpException(responseBody['message']);
     }
   }
-
-  Future<bool> createFile({required int postId}) async {
-    final response = await appService.apiHttpClient.uploadImage(
-      postId: postId,
-      file: selectedFile!,
-    );
-
-    if (response.statusCode == 201) {
-      return true;
-    } else {
-      throw HttpException('上传文件失败了。');
-    }
-  }
 }
+
