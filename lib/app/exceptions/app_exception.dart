@@ -7,3 +7,4 @@ class AppException implements Exception {
     return '${this.runtimeType}: $message';
   }
 }
+

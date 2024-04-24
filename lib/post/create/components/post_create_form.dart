@@ -101,6 +101,7 @@ class _PostCreateFormState extends State<PostCreateForm> {
         final postId = await postCreateModel.createPost();
         await postCreateModel.createFile(postId: postId);
 
+
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('内容发布成功！')),
         );
@@ -114,6 +115,7 @@ class _PostCreateFormState extends State<PostCreateForm> {
         postCreateModel.setLoading(false);
       }
     }
+
 
     // 提交按钮
     final submitButton = AppButton(
@@ -135,4 +137,6 @@ class _PostCreateFormState extends State<PostCreateForm> {
       ),
     );
   }
+
 }
+

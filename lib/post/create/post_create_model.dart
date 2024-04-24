@@ -61,6 +61,7 @@ class PostCreateModel extends ChangeNotifier {
       'content': content,
     }));
 
+
     final responseBody = jsonDecode(response.body);
 
     if (response.statusCode == 201) {
@@ -84,3 +85,4 @@ class PostCreateModel extends ChangeNotifier {
     }
   }
 }
+

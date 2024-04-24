@@ -20,6 +20,7 @@ class _AppHomeState extends State<AppHome> {
   bool showAppBar = true;
 
   // 点按底部导航栏事件处理
+
   Future<void> onTapAppBottomNavigationBarItem(int index) async {
 
     final postCreateModel = context.read<PostCreateModel>();
@@ -57,7 +58,7 @@ class _AppHomeState extends State<AppHome> {
         postCreateModel.reset();
       }
     }
-    
+
     setState(() {
       currentAppBottomNavigationBarItem = index;
       showAppBar = index == 0;

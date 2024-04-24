@@ -32,6 +32,7 @@ import 'package:path/path.dart' as p;
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+
 import 'package:xb2_flutter/post/create/post_create_model.dart';
 
 class PostCreateMedia extends StatefulWidget {
