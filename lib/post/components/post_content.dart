@@ -13,10 +13,12 @@ class PostContent extends StatelessWidget {
     return Container(
       child: Text(
         post.content!,
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w300,
-        ),
+        // style: TextStyle(
+        //   fontSize: 16,
+        //   fontWeight: FontWeight.w300,
+        //   color: Theme.of(context).textTheme.bodyLarge!.color,
+        // ),
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
     );
   }

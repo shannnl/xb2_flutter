@@ -27,7 +27,7 @@ class UserProfile extends StatelessWidget {
     );
 
     return Container(
-      color: Colors.white,
+      // color: Colors.white,
       height: double.infinity,
       width: double.infinity,
       child: Center(
