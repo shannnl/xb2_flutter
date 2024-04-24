@@ -113,7 +113,7 @@ class _PlaygroundHttpState extends State<PlaygroundHttp> {
         children: [
           Text(
             currentUserName ?? '未登录',
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.labelMedium,
           ),
           ElevatedButton(
             child: Text('发送请求'),
