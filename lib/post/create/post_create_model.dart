@@ -14,6 +14,7 @@ class PostCreateModel extends ChangeNotifier {
 
   String? title;
   String? content;
+
   bool loading = false;
 
   setTitle(String? data) {
@@ -24,6 +25,7 @@ class PostCreateModel extends ChangeNotifier {
     content = data;
   }
 
+
   setLoading(bool data) {
     loading = data;
     notifyListeners();
@@ -32,15 +34,18 @@ class PostCreateModel extends ChangeNotifier {
   reset() {
     title = null;
     content = null;
+
   }
 
   Future<int> createPost() async {
     final uri = Uri.parse('${AppConfig.apiBaseUrl}/posts');
 
+
     final response = await appService.apiHttpClient.post(uri, body: {
       'title': title,
       'content': content,
     });
+
 
     final responseBody = jsonDecode(response.body);
 
@@ -52,3 +57,4 @@ class PostCreateModel extends ChangeNotifier {
     }
   }
 }
+

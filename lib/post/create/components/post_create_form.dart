@@ -4,6 +4,7 @@ import 'package:xb2_flutter/app/components/app_button.dart';
 import 'package:xb2_flutter/app/components/app_text_field.dart';
 import 'package:xb2_flutter/app/exceptions/app_exception.dart';
 import 'package:xb2_flutter/app/exceptions/validate_exception.dart';
+
 import 'package:xb2_flutter/post/create/post_create_model.dart';
 
 class PostCreateForm extends StatefulWidget {
@@ -23,8 +24,10 @@ class _PostCreateFormState extends State<PostCreateForm> {
   final contentFieldController = TextEditingController();
 
   @override
+
   Widget build(BuildContext context) {
     final postCreateModel = context.watch<PostCreateModel>();
+
 
     // 标题字段
     final titleField = AppTextField(
@@ -75,7 +78,9 @@ class _PostCreateFormState extends State<PostCreateForm> {
 
         postCreateModel.setLoading(true);
         final postId = await postCreateModel.createPost();
+
         print(postId);
+
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('内容发布成功！')),
@@ -90,6 +95,7 @@ class _PostCreateFormState extends State<PostCreateForm> {
         postCreateModel.setLoading(false);
       }
     }
+
 
     // 提交按钮
     final submitButton = AppButton(
@@ -110,4 +116,6 @@ class _PostCreateFormState extends State<PostCreateForm> {
       ),
     );
   }
+
 }
+
